@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .row::after{
+            content: "";
+            clear: both;
+            display: table;
+        }
+        [class*="col-"]{
+            float: left;
+            padding: 15px;
+        }
+        .header {
+            background-color: blanchedalmond;
+            color: black;
+            padding: 15px;
+        }
+        .menu ul {
+            list-style-type: none;
+            margin: 0; padding: 0;
+        }
+        .menu li {
+            padding: 10px;
+            margin-bottom: 8px;
+            color: black;
+            background-color: bisque;
+        }
+        .menu li:hover {
+            background-color: blueviolet;
+        }
+        .aside {
+            background-color: aquamarine;
+            padding: 15px;
+            color: black;
+            text-align: center;
+        }
+        .footer {
+            background-color: burlywood;
+            color: black;
+            padding: 15px;
+        }
+        /* responsive */
+        [class*="col-"] {
+            width: 100%;
+        }
+        @media only screen and (min-width: 800px) {
+            .col-1 {width: 8.33%;}
+            .col-2 {width: 16.66%;}
+            .col-3 {width: 25%;}
+            .col-4 {width: 33.33%;}
+            .col-5 {width: 41.67;}
+            .col-6 {width: 50%;}
+            .col-7 {width: 58.34%;}
+            .col-8 {width: 66.67%;}
+            .col-9 {width: 75%;}
+            .col-10 {width: 83.3%;}
+            .col-11 {width: 91.63%;}
+            .col-12 {width: 100%;}
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Day la header</h1>
+    </div>
+    <div class="row">
+        <div class="col-3 menu">
+            <ul>
+                <li>Item1</li>
+                <li>Item2</li>
+                <li>Item3</li>
+                <li>Item4</li>
+            </ul>
+        </div>
+        <div class="col-6">
+            <h1>Noi dung</h1>
+            <p>chi tiet chi tiet chi tiet chi tiet chi tiet chi tiet </p>
+        </div>
+        <div class="col-3 right">
+            <div class="aside">
+                <h2>Ben phai 1</h2>
+                <p>Noi dung ben phai Noi dung ben phai Noi dung ben phai </p>
+                <h2>Ben phai 2</h2>
+                <p>Noi dung ben phai Noi dung ben phai Noi dung ben phai </p>
+                <h2>Ben phai 3</h2>
+                <p>Noi dung ben phai Noi dung ben phai Noi dung ben phai </p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>thong tin thong tin thong tin thong tin thong tin </p>
+    </div>
+</body>
+</html>
